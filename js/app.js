@@ -80,6 +80,9 @@ function readNow() {
                 e.preventDefault()
                 item.views = item.views++;
                 console.log(item.views)
+                if (popUp.classList.contains("show-popup")) {
+                    popUp.classList.remove("show-popup");                    
+                }
                 
                 main.classList.add("show-main")
                 image.classList.add("show-image")
@@ -104,7 +107,13 @@ function readNow() {
     }
 };
 
-const toTop =  document.querySelector(".top")
+const toTop = document.querySelector(".top"),
+popUp = document.querySelector(".pop-up")
+
+const menuBtn = document.querySelector(".menu")
+menuBtn.onclick = () => {
+    popUp.classList.toggle("show-popup")
+}
 
 
 window.onscroll = () => {
@@ -118,6 +127,8 @@ window.onscroll = () => {
         addLoader();
         toTop.style.opacity = window.scrollY > 400 ? "1" : "0"
     };
+    
+    popUp.classList.remove("show-popup")
 };
 
 const alertSpan = document.querySelector(".alert")
