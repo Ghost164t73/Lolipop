@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+    document.querySelector(".preloader").style.display = "none";
+    document.querySelector(".content").style.display = "block";
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     let articleContent = "";
 
