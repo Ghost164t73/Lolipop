@@ -24,7 +24,18 @@
     <link rel="stylesheet" href="styles/read.css">
 </head>
 <body>
+    <!-- preloader -->
+    <div class="body">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+<!-- loader -->
     <hr class="loader">
+
+<!-- body -->
+<div class="content" style="display: none;">
     <header>
         <div class="logo">
             <a href="#">LOLIpop</a>
@@ -39,6 +50,7 @@
     <i class="fa-solid fa-bars menu"></i>
     </header>
 
+    <!-- pop-up for smaller screens -->
     <div class="links pop-up">
         <a href="read-later.html">
             <i class="ri-star-fill star"></i>
@@ -48,21 +60,23 @@
     </div>
 
     <main>
+        <!-- welcome section -->
         <section class="welcome">
             <div class="text">
                 <p> 🌸 Step into a world of enchanting articles and beautiful poems. Dive into the magic of words, and let the journey begin! 📖💖</p><br>
                 <button class="read-more">Read more</button>
             </div>
-
             <img src="image/article3.jpg" alt="Read read read">
         </section>
 
+        <!-- article section -->
         <section class="articles">
             <h1 style="margin-bottom: 30px;">Check out what I've created!</h1>
             <div class="article-place"></div>
         </section>
     </main>
 
+    <!-- read-article -->
     <img src="image/article1.jpg" alt="" class="image">
     <i class="ri-close-circle-line close" id="close"></i>
 
@@ -73,10 +87,11 @@
             <h1 class="heading-big"></h1>
         </section>
 
-
+<!-- display any alert -->
     <div class="alert">
         <i class="ri-checkbox-circle-fill check"></i>Added
     </div>
+</div>    
 
     <a href="#" class="top"><i class="ri-arrow-up-line"></i></a>
     <script src="data/readlater.js"></script>
