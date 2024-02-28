@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , "Montserrat" , sans-serif;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    background: rgb(242, 82, 210);
+    width: 0;
+    border: none;
+    z-index: 999999999999999999;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* You can adjust the width */
+  }  
+
+body{
+    background: rgba(252, 250, 251, 0.735);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.sticky-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background-color: rgb(252, 250, 251);
+    box-shadow: 0 2px 2px #eeeeee;
+    animation: showHeader 1s;
+}
+
+@keyframes showHeader{
+    from{
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0%);
+    }
+}
+
+.logo a{
+    color: rgb(252, 8, 203);
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .links{
+    display: flex;
+    gap: 4rem;
+}
+
+.links a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+
+.links a::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(234, 10, 189);
+    bottom: 0px;
+    border-radius: 50px;
+    transition: .3s transform;
+    transform: scale(0);
+}
+
+.links a:hover::before{
+    transform: scale(1);
+}
+
+.star{
+    color: rgb(252, 8, 203);
+    font-size: 1.3em;
+}
+
+.check{
+    color: green;
+
+}
+
+.welcome{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.text{
+    max-width: 600px;
+    font-size: 2.3em;
+}
+
+.text button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: .5em;
+    cursor: pointer;
+    background: linear-gradient(to left,rgb(234, 10, 189) , rgb(246, 174, 237));
+    color: white;
+    transition: all .5s ;
+}
+
+.text button:hover{
+    background: linear-gradient(to bottom, rgb(246, 174, 237) ,rgb(234, 10, 189) );
+    scale: 1.04;
+}
+
+.articles{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.articles h1{
+    font-size: 3.5em;
+    text-align: center;
+    padding-bottom: 30px;
+    color: rgb(216, 16, 176);
+}
+
+.article-place{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 3rem;
+}
+
+.article{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 5px 5px #eeecec;
+}
+
+.article div{
+    margin: 10px;
+}
+
+.article .title{
+    font-size: 1.3em;
+    text-align: left;
+    padding-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.article span{
+    margin: 8px;
+    font-size: 1.1em;
+    color: #454343;
+    margin: 0;
+}
+
+.views{
+    font-size: 1em;
+}
+
+.article img{
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.views{
+    padding-top: 10px;
+}
+
+.hr{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+hr{
+    background: rgb(248, 26, 204);
+    height: 3px;
+    align-items: center;
+    width: 300px;
+}
+
+.article:hover .options{
+    transform: translateY(0%);
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(200%);
+    transition: transform .5s;
+}
+
+.options button{
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    transition: .3s linear;
+    color: white;
+    background-color: rgb(216, 16, 176);
+}
+
+.read-later:hover,.options a:hover{
+    background-color: rgb(166, 5, 134);
+    scale: 1.01;
+}
+
+.read-later:active{
+    background-color: rgb(248, 84, 215);
+}
+
+.options button i{
+    font-size: 1.3em;
+    padding-right: 5px;
+}
+
+.options a{
+    text-decoration: none;
+    background-color: rgb(216, 16, 176);
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 6px;
+}
+
+.alert{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    z-index: 99999999999;
+    color: green;
+    padding:20px 30px;
+    font-size: 1.1em;
+    box-shadow: 0px 2px 5px #9e9c9c4f;
+    opacity: 0;
+    transition: opacity .5s ,transform .5s;
+}
+
+.show-alert{
+    opacity: 1;
+    transform: translate(-50% , -50%);
+}
+
+.article .star{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    display: none;
+}
+
+.top{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(248, 26, 204);
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    border: 2px solid black;
+    right: 30px;
+    opacity: 0;
+    transition: .5s linear;
+}
+
+.top {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px){
+    .welcome{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+/* FOR MOBILE SCREENS */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    header .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .welcome img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 1.5em;
+    }
+
+    .articles {
+        padding: 20px;
+    }
+
+    .article-place {
+        grid-template-columns: 1fr;
+    }
+
+    .article img {
+        width: 100%;
+        height: auto;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .options {
+        transform: translateY(0);
+        flex-direction: column-reverse;
+        gap: .5rem;
+    }
+
+    .top {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .alert{
+        text-align: center;
+        font-size: .9em;
+    }
+}

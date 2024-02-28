@@ -1,0 +1,9 @@
+
+
+            main.classList.add("show-main")
+            image.classList.add("show-image")
+            header.classList.remove("sticky-header")
+            document.body.style.overflow = "hidden"
+
+
+    

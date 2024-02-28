@@ -1,0 +1,140 @@
+*{
+    user-select: none;
+}
+
+.explore{
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+    margin: 100px;
+}
+
+.article-read{
+    display: inline-flex;
+    margin: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px #b4b2b274 ,-2px -5px 5px #b4b2b274;
+}
+
+.article-read img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.margin{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-read .link{
+    font-size: 1.2em;
+}
+
+.article-read .options-read .read-now,
+.remove{
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: .2s linear;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 10px;
+    background: rgb(219, 17, 206);
+}
+
+.read-title{
+    color: rgb(245, 9, 230);
+}
+
+.empty{
+    text-align: center;
+    font-size: 3em;
+    margin: 100px;
+    margin-top: 230px;
+    color: rgba(0, 0, 0, 0.463);
+    font-weight: 600;
+}
+
+.remove{
+    border: none;
+    cursor: pointer;
+    opacity: .6;
+    background: rgb(119, 117, 117);
+}
+
+.remove:hover{
+    background: rgb(68, 67, 67);
+}
+
+/* Add this at the end of your existing CSS */
+
+@media screen and (max-width: 600px) {
+    .explore {
+        font-size: 1.5em;
+        margin: 50px;
+    }
+
+    .article-read {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .article-read img {
+        width: 100%;
+        height: auto;
+    }
+
+    .margin {
+        margin: 15px;
+    }
+
+    .article-read .link {
+        font-size: 1em;
+    }
+
+    .article-read .options-read .read-now,
+    .remove {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+
+    .empty {
+        font-size: 2em;
+        margin: 50px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .explore {
+        font-size: 1.2em;
+        margin: 30px;
+    }
+
+    .article-read {
+        margin: 15px;
+    }
+
+    .margin {
+        margin: 10px;
+    }
+
+    .article-read .link {
+        font-size: 0.9em;
+    }
+
+    .article-read .options-read .read-now,
+    .remove {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    .empty {
+        font-size: 1.5em;
+        margin: 30px;
+        margin-top: 100px;
+    }
+}

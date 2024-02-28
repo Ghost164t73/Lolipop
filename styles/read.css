@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html{
+    scroll-behavior: smooth;
+}
+.main{
+    position: fixed;
+    transform: translateY(900%);
+    transition: 0s transform;
+    top: 0;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 10px;
+}
+
+.read-article{
+    height: 500px;
+    overflow-y: visible;
+    z-index: 100000;
+    border-radius: 10px;
+    font-weight: 600;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255,0.8);
+    margin: 40px;
+    box-shadow: 0 10px 10px #4d4b4bf5;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    object-fit: cover;
+    display: none;
+    left: 0;
+    z-index: 1000;
+    filter: brightness(50%); 
+    animation: showImage .5s;
+}
+
+.close{
+    z-index:9999999999;
+}
+
+.show-main{
+    transform: translateY(0%);
+    transition: 1s transform;
+}
+
+.show-image{
+    display: block;
+}
+
+@keyframes showImage{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.poem{
+    font-size: 1.8em;
+    margin: 30px;
+    max-width: 450px;
+    font-weight: 200;
+    font-family: "Pacifico" , "Dancing Script";
+}
+
+.close{
+    font-size: 4em;
+    position: fixed;
+    top: 30px;
+    color: white;
+    right: 3dvh;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+    transition: .7s transform , scale .3s;
+    animation: rotate .8s;
+}
+
+@keyframes rotate{
+from{
+    transform: rotate(180deg);
+    scale: 10;
+}to{
+    transform: rotate(0deg);
+    scale: 1;
+}
+}
+
+.close:hover{
+    transform: rotate(180deg);
+    scale: 1.05;
+}
+
+.heading-big{
+    z-index: 9999999;
+    color: rgb(253, 61, 247);
+    font-size: 5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-shadow: 0px 5px 5px rgb(253, 61, 247);
+    animation: heading .5s;
+}
+
+@keyframes heading{
+    from{
+        transform: translateY(400px);
+    }to{
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        gap: 2rem;
+        flex-direction: column-reverse;
+        padding: 5px;
+    }
+
+    .read-article {
+        height: 500px;
+        margin: 20px;
+        font-size: 1.2em;
+    }
+
+    .poem {
+        font-size: 1.5em;
+        margin: 20px;
+        max-width: 100%;
+    }
+
+    .close {
+        font-size: 3em;
+        top: 15px;
+        right: 20px;
+    }
+
+    .heading-big {
+        font-size: 2.4em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        gap: 1rem;
+    }
+
+    .read-article {
+        margin: 15px;
+    }
+
+    .poem {
+        font-size: 1.2em;
+        margin: 15px;
+    }
+
+    .close {
+        font-size: 2em;
+    }
+
+    .heading-big {
+        font-size: 2.4em;
+    }
+}
