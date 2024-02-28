@@ -49,7 +49,27 @@ And as a blind girl I jumped in ignoring the ache ,disaster and misery<br>
 <br>
 And if anybody asks me if I regret it I'll show my biggest scar and say it's my favorite cause it's from you`
 
+const intimacy = `Our generation sees intimacy as a whole different thing.<br>
+<br>
+Intimacy is not soley about physical closeness,it's not just about the feeling of one's touch<br>
+<br>
+Intimacy is about connecting with the one you love <br>
+A connection that can contradict any form of distance.`;
 
+const touch = `
+    I never knew what the feeling of one's touch meant till I met the one<br>
+    His lips so soft I could kiss him forever<br>
+<br>
+When his lips touch mine it's more than butterflies in my stomach<br>
+It's more of light bugs in a dark place<br>
+<br>
+I could see my world in it can't even look at it cause it's beauty takes me away<br>
+<br>
+When he holds me it's like I'm floating and when he's not near I'm like a dry leaf<br>
+<b>Oh!</b><br>
+What a predicament it is<br>
+
+`
 
 //Articles 
 const articles = [
@@ -108,5 +128,21 @@ const articles = [
         title: "Love",
         date: "",
         views: "10K",
+    },
+    {
+        id: 8,
+        poem: intimacy,
+        image: "article10.jpg",
+        title: "Intimacy",
+        date: "",
+        views: "670",
+    },
+    {
+        id: 9,
+        poem: touch,
+        image: "article11.jpg",
+        title: "His touch",
+        date: "",
+        views: "890",
     },
 ];
