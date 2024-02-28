@@ -313,9 +313,9 @@ hr{
 .preloader {
     display: flex;
     justify-content: center;
-    hegiht: 100vh;
     align-items: center;
     z-index: 999999;
+    height: 100vh;
 }
 
 .loader-circle {
