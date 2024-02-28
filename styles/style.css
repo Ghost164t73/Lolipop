@@ -210,6 +210,24 @@ hr{
     transform: translateY(0%);
 }
 
+.pop-up{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 3px 3px 3px #8c8c8c74;
+    position: fixed;
+    right: 0px;
+    padding: 30px;
+    background: white;
+    transform: translateX(100%);
+    transition: .5s transform;
+    z-index: 99999999999;
+}
+
+.show-popup{
+    transform: translateX(0);
+}
+
 .menu{
     display: none;
     font-size: 1.8em;
