@@ -6,7 +6,8 @@ window.addEventListener("load", function () {
 document.addEventListener("DOMContentLoaded", () => {
     let articleContent = "";
 
-    articles.forEach(article => {
+    articles.reverse();
+    articles.forEach((article)=> {
         let date = new Date;
         let day = date.getDate();
         let year = date.getFullYear();
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="link">
                 <span><h1 class="title">${article.title}</h1></span>
                 <span class="date">Date: ${date}</span><br>
-                <span class="views">● ${article.views} views </span>
+                <span class="views">● ${article.views} views</span>
             </div>
             <div class="options">
                 <button class="read-later"><i class="ri-add-circle-fill"></i>Add to favorites</button>
@@ -29,21 +30,31 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             `;
         
+            
         document.querySelector(".article-place").innerHTML = articleContent;
-
-        addToReadLater();
-
-        readNow();
-
+        
+        const artic = document.querySelectorAll(".article");
+        artic.forEach((art, i) => {
+            let item = articles[i];
+            art.onclick = () => {
+                console.log("clicked")
+                showClickedArticle(item);
+            };
+        });
+            
+            addToReadLater();
+            readNow();
+            
+        });
     });
-});
+    
 
 //LOADER
 let loader = document.querySelector('.loader');
 
  function addLoader() {
     const windowScroll = window.scrollY;
-    const element = document.documentElement.scrollHeight;
+     const element = document.documentElement.scrollHeight;
     const windowHeight = window.innerHeight;
 
     const scrolled = (windowScroll / (element - windowHeight)) * 100;
@@ -83,21 +94,11 @@ function readNow() {
         if (item.image) {
             readNow.addEventListener('click', (e) => {
                 e.preventDefault()
-                item.views = item.views++;
-                console.log(item.views)
                 if (popUp.classList.contains("show-popup")) {
                     popUp.classList.remove("show-popup");                    
                 }
                 
-                main.classList.add("show-main")
-                image.classList.add("show-image")
-                closeBtn.style.display = "block";
-                header.classList.remove("sticky-header")
-                document.body.style.overflow = "hidden";
-                document.querySelector(".heading-big").innerHTML = articles[i].title
-                image.src = `image/${articles[i].image}`
-                
-                document.querySelector(".poem").innerHTML = item.poem;
+               showClickedArticle(item)
             });
         };
     });
@@ -146,4 +147,20 @@ function showAlert(content) {
     setTimeout(() => {
         alertSpan.classList.remove("show-alert")
     } , 1500)
+};
+
+function showClickedArticle(item) {
+    if (popUp.classList.contains("show-popup")) {
+        popUp.classList.remove("show-popup");                    
+    }
+    
+    main.classList.add("show-main")
+    image.classList.add("show-image")
+    closeBtn.style.display = "block";
+    header.classList.remove("sticky-header")
+    document.body.style.overflow = "hidden";
+    document.querySelector(".heading-big").innerHTML = item.title;
+    image.src = `image/${item.image}`
+    
+    document.querySelector(".poem").innerHTML = item.poem;
 }
