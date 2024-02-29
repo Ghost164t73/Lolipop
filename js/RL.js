@@ -41,6 +41,13 @@ function renderReadLaterSection() {
         empty.textContent = "Your favorite list is empty";
         section.appendChild(empty);
     }
+    const articleRead = document.querySelectorAll(".article-read")
+    articleRead.forEach((art, i) => {
+        let item = readlater[i]
+        art.onclick = () => {
+            showClickedArticle(item)
+        }
+    })
 
     
     document.querySelectorAll(".remove").forEach((remove, index) => {
@@ -56,18 +63,10 @@ renderReadLaterSection();
 
 function readNow() {
     document.querySelectorAll('.read-now').forEach((readNow, i) => {
+        let item = articles[i]
         readNow.addEventListener('click', (e) => {
             e.preventDefault()
-            let item = readlater[i]
-            let textContent = item.poem;
-            main.classList.add("show-main")
-            image.classList.add("show-image")
-            closeBtn.style.display = "block";
-            document.body.style.overflow = "hidden";
-            document.querySelector(".heading-big").innerHTML = readlater[i].title;
-            image.src = `image/${item.image}`;
-
-            document.querySelector(".poem").innerHTML = textContent;
+           showClickedArticle(item)
         });
     });
     
@@ -88,4 +87,16 @@ function showAlert(content) {
     setTimeout(() => {
         alertSpan.classList.remove("show-alert")
     } , 1500)
+}
+
+
+function showClickedArticle(item) {    
+    main.classList.add("show-main")
+    image.classList.add("show-image")
+    closeBtn.style.display = "block";
+    document.body.style.overflow = "hidden";
+    document.querySelector(".heading-big").innerHTML = item.title;
+    image.src = `image/${item.image}`
+    
+    document.querySelector(".poem").innerHTML = item.poem;
 }
