@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         articleContent += `
             <div class="article">
             <i class="ri-star-fill star"></i>
-            <img src="image/${article.image}" alt="read read read">
+            <img src="image/${article.image}" alt="read read read" class="image">
             <div class="link">
                 <span><h1 class="title">${article.title}</h1></span>
                 <span class="date">Date: ${date}</span><br>
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
         document.querySelector(".article-place").innerHTML = articleContent;
         
-        const artic = document.querySelectorAll(".article");
+        const artic = document.querySelectorAll(".image");
         artic.forEach((art, i) => {
             let item = articles[i];
             art.onclick = () => {
