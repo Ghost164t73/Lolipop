@@ -41,7 +41,7 @@ function renderReadLaterSection() {
         empty.textContent = "Your favorite list is empty";
         section.appendChild(empty);
     }
-    const articleRead = document.querySelectorAll(".article-read")
+    const articleRead = document.querySelectorAll(".image-read")
     articleRead.forEach((art, i) => {
         let item = readlater[i]
         art.onclick = () => {
