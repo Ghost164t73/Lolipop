@@ -63,7 +63,7 @@ renderReadLaterSection();
 
 function readNow() {
     document.querySelectorAll('.read-now').forEach((readNow, i) => {
-        let item = articles[i]
+        let item = readlater[i]
         readNow.addEventListener('click', (e) => {
             e.preventDefault()
            showClickedArticle(item)
