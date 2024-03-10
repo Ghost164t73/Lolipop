@@ -97,7 +97,6 @@ header .links{
 
 .check{
     color: green;
-
 }
 
 .welcome{
@@ -218,10 +217,17 @@ hr{
     position: fixed;
     right: 0px;
     padding: 30px;
+    width: 60%;
+    height: 100%;
+    top: 0;
     background: white;
     transform: translateX(100%);
     transition: .5s transform;
     z-index: 99999999999;
+}
+
+.blur-content{
+    filter: blur(2px);
 }
 
 .show-popup{
@@ -232,10 +238,13 @@ hr{
     display: none;
     font-size: 1.8em;
     font-weight: 600;
+    padding: 7px;
+    border-radius: 50px;
+
 }
 
 .menu:active{
-    color: #8c8c8c;
+    background: #8c8c8c1d;
 }
 
 .options{
@@ -353,7 +362,7 @@ hr{
     font-weight: 600;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1100px){
     .welcome{
         flex-direction: column;
         gap: 3rem;
@@ -428,6 +437,10 @@ hr{
         text-align: center;
         font-size: .9em;
     }
+}
+
+img{
+    user-select: none;
 }
 
 @keyframes spin {
