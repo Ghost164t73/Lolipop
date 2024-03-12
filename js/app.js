@@ -116,16 +116,60 @@ function readNow() {
 const toTop = document.querySelector(".top"),
 popUp = document.querySelector(".pop-up")
 
-const menuBtn = document.querySelector(".menu")
-menuBtn.onclick = (e) => {
-    e.stopPropagation(); 
-    popUp.classList.toggle("show-popup");
-    document.querySelector(".content").classList.toggle("blur-content");
+
+const poem = document.querySelector(".poem");
+
+const fonts = ["Dancing scripts", "monospace", "sans-serif", "Montserrat","Poppins" ,"Pacifico"]
+let randomNumber = 0 ;
+function changeFont() {
+    randomNumber++;
+    if (randomNumber > fonts.length - 1) {
+        randomNumber = 0
+    }
+
+    const font = fonts[randomNumber]
+    console.log(font);
+    poem.style.fontFamily =font;
+
+    font === "Montserrat" ? poem.style.fontWeight = "bold" : null
+}
+
+document.querySelector(".change-font").onclick = () => {
+    changeFont();
+}
+
+const mainOverlay = document.querySelector("#overlay");
+const sidebarOverlay = document.querySelector("#sidebar-overlay");
+
+const blurMain = () => {
+    mainOverlay.style.visibility = "visible";
 };
 
-function closeSideBar() {  
+const unblurMain = () => {
+    mainOverlay.style.visibility = "hidden";
+};
+
+const blurSidebar = () => {
+    sidebarOverlay.style.visibility = "visible";
+};
+
+const unblurSidebar = () => {
+    sidebarOverlay.style.visibility = "hidden";
+};
+
+const menuBtn = document.querySelector(".menu");
+menuBtn.onclick = (e) => {
+    e.stopPropagation();
+    popUp.classList.toggle("show-popup");
+    blurMain(); // Blur the main content
+    blurSidebar(); // Blur the sidebar
+};
+
+function closeSideBar() {
     popUp.classList.remove("show-popup");
-    document.querySelector(".content").classList.remove("blur-content")
+    unblurMain(); // Unblur the main content
+    unblurSidebar(); // Unblur the sidebar
+    // Add other closeSidebar logic if needed
 }
 
 window.onscroll = () => {
