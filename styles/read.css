@@ -37,7 +37,7 @@ html{
     display: none;
     left: 0;
     z-index: 1000;
-    filter: brightness(50%); 
+    filter: brightness(40%); 
     animation: showImage .5s;
 }
 
@@ -71,25 +71,23 @@ html{
 }
 
 .close{
-    font-size: 4em;
+    font-size: 3.2em;
     position: fixed;
     top: 30px;
     color: white;
-    right: 3dvh;
+    right: 4vh;
     font-weight: bold;
     display: none;
     cursor: pointer;
     transition: .7s transform , scale .3s;
-    animation: rotate .8s;
+    animation: slide .8s;
 }
 
-@keyframes rotate{
+@keyframes slide{
 from{
-    transform: rotate(180deg);
-    scale: -.5;
+    transform: translateX(-50px);
 }to{
-    transform: rotate(0deg);
-    scale: 1;
+    transform: translateX(0);
 }
 }
 
@@ -119,7 +117,7 @@ from{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .main {
         gap: 2rem;
         flex-direction: column-reverse;
@@ -139,7 +137,7 @@ from{
     }
 
     .close {
-        font-size: 3.5em;
+        font-size: 2em;
         top: 15px;
         right: 20px;
     }
@@ -164,7 +162,7 @@ from{
     }
 
     .close {
-        font-size: 3.5em;
+        font-size: 2em;
     }
 
     .heading-big {
