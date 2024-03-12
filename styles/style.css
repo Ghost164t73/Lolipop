@@ -223,7 +223,7 @@ hr{
     background: white;
     transform: translateX(100%);
     transition: .5s transform;
-    z-index: 99999999999;
+    z-index: 99999999999999999999999999;
 }
 
 .blur-content{
@@ -236,11 +236,34 @@ hr{
 
 .menu{
     display: none;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 600;
-    padding: 7px;
+    padding: 10px;
     border-radius: 50px;
+}
 
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999999999;
+    visibility: hidden;
+}
+
+
+#sidebar-overlay {
+    /* Styles for the sidebar overlay */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+    z-index: 999999999;
+    visibility: hidden;
 }
 
 .menu:active{
@@ -293,7 +316,7 @@ hr{
 
 .alert{
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50% , -50%);
     background-color: white;
@@ -303,6 +326,7 @@ hr{
     font-size: 1.1em;
     box-shadow: 0px 2px 5px #9e9c9c4f;
     opacity: 0;
+    border-radius: 6px;
     transition: opacity .5s ,transform .5s;
 }
 
@@ -360,6 +384,13 @@ hr{
     font-size: 1.3em;
     color: white;
     font-weight: 600;
+}
+
+.change-font{
+    position: fixed;
+    left: 30px;
+    bottom: 10px;
+    z-index: 999999999999999999999999999;
 }
 
 @media screen and (max-width: 1100px){
