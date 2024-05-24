@@ -6,8 +6,8 @@ html{
 .main{
     position: fixed;
     transform: translateY(900%);
-    transition: 0s transform;
     top: 0;
+    width: 100%;
     z-index: 999999999;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ html{
 .close{
     font-size: 3.2em;
     position: fixed;
-    top: 30px;
+    top: 20px;
     color: white;
     right: 4vh;
     font-weight: bold;
@@ -105,7 +105,7 @@ from{
     align-items: center;
     justify-content: center;
     user-select: none;
-    text-shadow: 0px 5px 5px rgb(253, 61, 247);
+    text-shadow: 0px 5px 5px black;
     animation: heading .5s;
 }
 
@@ -125,7 +125,7 @@ from{
     }
 
     .read-article {
-        height: 500px;
+        height: 100%;
         margin: 20px;
         font-size: 1.2em;
     }
