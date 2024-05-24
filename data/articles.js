@@ -144,5 +144,47 @@ const articles = [
         title: "His touch",
         date: "",
         views: "890",
-    },
+    }, {
+    "id": "10",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "00001.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+}, {
+    "id": "11",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "00002.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+}, {
+    "id": "12",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "00003.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+}, {
+    "id": "13",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "00004.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+}, {
+    "id": "14",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "1646.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+}, {
+    "id": "15",
+    "poem": "My heart's like humpty dumptyEverytime it shatters to a million pieces<br>Piece by piece I fix my heart <br>But there's not enough pieces<br>I'm getting tired of fixing my heart I don't really have good puzzle skills <br>I am puzzled at how my heart still functions <br>It's been shattered one to many timesAnd an explanation would be good <br><br>I'd love to understand how my heart has the ability to love <br>How i still fall head over heels for someone even when I can't stand on my feetI'm desperate for an answer, I need to end this trend.",
+    "image": "1653.jpg",
+    "title": "Humpty",
+    "date": "",
+    "views": 27
+},
 ];
