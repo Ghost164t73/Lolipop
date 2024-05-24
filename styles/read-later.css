@@ -31,7 +31,7 @@
 }
 
 .article-read .link{
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .article-read .options-read .read-now,
@@ -39,14 +39,15 @@
     padding: 10px 15px;
     text-decoration: none;
     transition: .2s linear;
-    font-size: 1.1em;
+    font-size: 1em;
     color: white;
-    border-radius: 10px;
-    background: rgb(219, 17, 206);
+    border-radius: 4rem;
+    background: rgb(255, 30, 240);
 }
 
 .read-title{
     color: rgb(245, 9, 230);
+    font-size: 1.5em;
 }
 
 .empty{
@@ -62,11 +63,11 @@
     border: none;
     cursor: pointer;
     opacity: .6;
-    background: rgb(119, 117, 117);
+    background: rgb(95, 95, 95);
 }
 
 .remove:hover{
-    background: rgb(68, 67, 67);
+    opacity: 1;
 }
 
 /* Add this at the end of your existing CSS */
