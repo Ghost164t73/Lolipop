@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOLIpop</title>
+    <title>Lolipop</title>
+
+    <link rel="icon" href="image/yunus-high-resolution-logo (1).png" type="image/x-icon">
+
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -20,22 +23,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- styles -->
+    <link rel="stylesheet" href="styles/loader.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/read.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 <body>
     <!-- preloader -->
-        <div class="preloader">
-            <div class="loader-circle"></div>
-        </div>
+    <div class="preloader">
+      <div class="item item-1"></div>
+      <div class="item item-2"></div>
+      <div class="item item-3"></div>
+      <div class="item item-4"></div>
+    </div>
 
             <!-- pop-up for smaller screens -->
     <div class="links pop-up">
-        <a href="read-later.html">
-            <i class="ri-star-fill star"></i>
+        <a href="read-later.html" class="top-link">
+            <i class="ri-star-fill star" ></i>
             Favorites
         </a>
-        <a href="contact.html">Contact me</a>
+        <a href="contact.html" class="top-link">Contact me</a>
     </div>
 
         <!-- body -->
@@ -51,12 +60,15 @@
         <div class="logo">
             <a href="#">LOLIpop</a>
         </div>
+        <span class="dark">
+          <span></span>
+        </span>
         <div class="links">
-            <a href="read-later.html">
+            <a href="read-later.html" class="top-link">
                 <i class="ri-star-fill star"></i>
                 Favorites
             </a>
-            <a href="contact.html">Contact me</a>
+            <a href="contact.html" class="top-link">Contact me</a>
         </div>
     <i class="fa-solid fa-bars menu"></i>
     </header>
@@ -71,10 +83,11 @@
             </div>
             <img src="image/article3.jpg" alt="Read read read">
         </section>
-
+        
         <!-- article section -->
         <section class="articles">
-            <h1 style="margin-bottom: 30px;">Check out what I've created!</h1>
+          <div class="vertical-line"><span> Featured</span></div>
+            <h1 style="margin-bottom: 30px;"><span>/</span> Featured</h1>
             <div class="article-place"></div>
         </section>
     </main>
@@ -90,18 +103,105 @@
             <h1 class="heading-big"></h1>
         </section>
 
-        <button class="change-font">change font</button>
+        <button class="change-font">
+            <div class="info">change poem font</div>
+            change font
+        </button>
         
         <!-- alert -->
         <div class="alert-container">
-            <div class="alert">Added</div>
-        </div>        
+            <div class="alert"></div>
+        </div>
+
+
+          <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+    
+          <div class="wrapper">
+    
+            <a href="index.html" class="footer-logo top-link ">
+              <img src="image/yunus-high-resolution-logo (1).png" alt="SimpleBlog Logo" width="150">
+              Lolipop
+            </a>
+    
+            <p class="footer-text">
+             Have a great time reading poems that delights your day
+            </p>
+    
+          </div>
+    
+          <div class="wrapper">
+    
+            <p class="footer-title">Quick Links</p>
+    
+            <ul>
+    
+              <li>
+                <a href="#" class="footer-link">Advertise with us</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">About Us</a>
+              </li>
+    
+              <li>
+                <a href="contact.html" class="footer-link">Contact Us</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+    
+          <div class="wrapper">
+    
+            <p class="footer-title">Tour</p>
+    
+            <ul>
+    
+              <li>
+                <a href="readArticle.html" class="footer-link">Articles</a>
+              </li>
+    
+              <li>
+                <a href="read-later.html" class="footer-link">Favorites</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Terms Of Use</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+    
+        </div>
+    
+        <p class="copyright">
+          &copy; Copyright 2024 <a href="index.html">Lolipop</a>
+        </p>
+    
+      </footer>
+    
+    <!-- END FOOTER -->
+
+
+        
 </div>
 
+    <a href="readArticle.html" class="read-in-link" target="_blank">Open poem in a new tab
+        <i class="ri-arrow-right-up-line arrow"></i>
+    </a>
+
+    <div class="overlay"></div>
+    <div class="showcase-overlay"></div>
 
     <a href="#" class="top"><i class="ri-arrow-up-line"></i></a>
+
+  
     <script src="data/readlater.js"></script>
-    <script src="data/articles.js"></script>
+    <script src="data/readnewtab.js"> </script>
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
