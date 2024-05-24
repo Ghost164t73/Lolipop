@@ -1,0 +1,107 @@
+.preloader {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+.item-1 {
+  background-color: #fa56ea;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-2 {
+  background-color: rgb(250, 138, 216);
+  top: 0;
+  right: 0;
+  -webkit-animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-3 {
+  background-color: #f71bbc;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+
+.item-4 {
+  background-color: rgb(190, 1, 175);
+  bottom: 0;
+  left: 0;
+  -webkit-animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+@-webkit-keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 50px)} 
+  50% {transform: translate(50px, 50px)} 
+  75% {transform: translate(50px, 0)} 
+}
+
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 50px)} 
+  50% {transform: translate(50px, 50px)} 
+  75% {transform: translate(50px, 0)} 
+}
+
+@-webkit-keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-50px, 0)} 
+  50% {transform: translate(-50px, 50px)} 
+  75% {transform: translate(0, 50px)} 
+}
+
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-50px, 0)} 
+  50% {transform: translate(-50px, 50px)} 
+  75% {transform: translate(0, 50px)} 
+}
+
+@-webkit-keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -50px)} 
+  50% {transform: translate(-50px, -50px)} 
+  75% {transform: translate(-50px, 0)} 
+}
+
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -50px)} 
+  50% {transform: translate(-50px, -50px)} 
+  75% {transform: translate(-50px, 0)} 
+}
+
+@-webkit-keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(50px, 0)} 
+  50% {transform: translate(50px, -50px)} 
+  75% {transform: translate(0, -50px)} 
+}
+
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(50px, 0)} 
+  50% {transform: translate(50px, -50px)} 
+  75% {transform: translate(0, -50px)} 
+}
