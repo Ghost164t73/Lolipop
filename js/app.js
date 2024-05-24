@@ -6,12 +6,11 @@ window.addEventListener("load", function () {
 });
 
 let verticalLine = document.querySelector(".vertical-line");    
-const API_URL = "http://localhost:3500/articles";
 const popUp = document.querySelector(".pop-up");
 const toTop = document.querySelector(".top");
 const content = document.querySelector(".content")
 
-const getArticles = async (articles) => {
+const getArticles =  () => {
     let articleContent = "";
     
     articles.reverse();
@@ -37,7 +36,7 @@ const getArticles = async (articles) => {
             </div>
             </div>
             `;
-        
+    })
         document.querySelector(".article-place").innerHTML += articleContent;
         const artic = document.querySelectorAll(".read");
         artic.forEach((art, i) => {
