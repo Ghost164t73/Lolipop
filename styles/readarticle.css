@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.content-read {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background: rgba(255, 255, 255);
+    width: 700px;
+    margin-top: 50px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.black-text {
+    color: black;
+}
+
+.text-large {
+    font-size: 1.5em;
+}
+
+.title-read {
+    color: rgb(212, 17, 180);
+    font-size: 1.9em;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info .date {
+    margin-top: 10px;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-muted {
+    font-weight: 200;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.poem {
+    max-width: 600px;
+    height: 500px;
+    padding: 20px;
+    background: transparent;
+    margin-top: 30px;
+    font-size: 1.5em;
+    overflow-y: scroll;
+    border: 3px solid rgb(26, 25, 26);
+    border-radius: 10px;
+}
+
+.bg_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.class {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.recommended {
+    overflow-y: scroll;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #838181;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+
+.recommended .articles-feed {
+    background: rgba(255, 255, 255);
+    width: 360px;
+    padding: 20px;
+}
+
+.title-h2 {
+    padding: 15px;
+    text-align: center;
+}
+
+.recommended .article-feed {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 10px;
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recommended .article-feed img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.recommended .article-feed:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    transition: transform .1s ease-in-out;
+    color: blue;
+}
+
+.whitespace {
+    height: 100vh;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .content-read {
+        width: 600px;
+        padding: 40px;
+    }
+
+    .poem {
+        max-width: 500px;
+    }
+
+    .class {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .recommended {
+        top: 150px;
+        right: 10px;
+        max-width: 320px;
+    }
+
+    .recommended .articles-feed {
+        width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content-read {
+        width: 500px;
+        padding: 30px;
+    }
+
+    .poem {
+        max-width: 400px;
+        height: 900px;
+    }
+
+    .recommended .articles-feed {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-read {
+        width: 90%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .poem {
+        width: 100%;
+        max-width: none;
+        height: 800px;
+    }
+
+    .class {
+        gap: 1rem;
+    }
+
+    .recommended {
+        position: static;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .recommended .articles-feed {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-read {
+        padding: 10px;
+    }
+
+    .poem {
+        height: 800px;
+    }
+
+    .recommended .article-feed img {
+        width: 60px;
+        height: 60px;
+    }
+}
