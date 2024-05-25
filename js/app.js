@@ -1,5 +1,4 @@
 
-
 window.addEventListener("load", function () {
     document.querySelector(".preloader").style.display = "none";
     document.querySelector(".content").style.display = "block";
@@ -8,7 +7,12 @@ window.addEventListener("load", function () {
 let verticalLine = document.querySelector(".vertical-line");    
 const popUp = document.querySelector(".pop-up");
 const toTop = document.querySelector(".top");
-const content = document.querySelector(".content")
+const content = document.querySelector(".content");
+
+const main = document.querySelector(".main");
+const header = document.querySelector("header");
+const image = document.querySelector(".image");
+const closeBtn = document.querySelector("#close");
 
 const getArticles =  () => {
     let articleContent = "";
@@ -116,10 +120,6 @@ document.querySelector(".change-font").onclick = () => {
     changeFont();
 }
 
-const main = document.querySelector(".main");
-const header = document.querySelector("header");
-const image = document.querySelector(".image");
-const closeBtn = document.querySelector("#close");
 
 
 //Reading section of the page
